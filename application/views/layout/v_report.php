@@ -97,7 +97,7 @@ $table .= '<tr style="background-color:#ccc;">
 			<th style="border:1px solid #000;">NO.SURAT</th>
 			<th style="border:1px solid #000;">TANGGAL</th>
 			<th style="border:1px solid #000;">PERIHAL</th>
-			<th style="border:1px solid #000;">KETERANGAN</th>
+			<th style="border:1px solid #000;">KET</th>
 			<th style="border:1px solid #000;">JUMLAH</th>
 		  </tr>';
 $no = 1;

@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 16 Jan 2019 pada 15.40
--- Versi Server: 10.1.19-MariaDB
--- PHP Version: 7.0.13
+-- Waktu pembuatan: 23 Jun 2022 pada 02.44
+-- Versi server: 10.4.22-MariaDB
+-- Versi PHP: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -52,7 +53,10 @@ INSERT INTO `kko` (`no`, `nama`, `upt`, `id`, `jam_masuk`, `isi`, `tanggal`, `ju
 (16267, 'C043000400-30004-DEPUTI JKRP', 'roger', 4, '10:27:12', '5102080003-Pemasaran Jasa Keuangan', '2019-01-16', 12, '12'),
 (16268, 'C083000400-PERWAKILAN SPI', 'roger', 4, '07:54:55', '5104050002-Pengawasan/Pemeriksaan', '2020-01-01', 3456, 'coba'),
 (16269, 'C083000400-PERWAKILAN SPI', 'Palembang', 30000, '07:59:57', '5104050002-Pengawasan/Pemeriksaan', '2019-02-16', 1000, 'coba'),
-(16270, 'C043000400-30004-DEPUTI JKRP', 'rahayu', 3, '12:38:04', '5102080001-Pemasaran Surat Paket', '2019-01-16', 234, '12');
+(16270, 'C043000400-30004-DEPUTI JKRP', 'rahayu', 3, '12:38:04', '5102080001-Pemasaran Surat Paket', '2019-01-16', 234, '12'),
+(16271, 'C043000400-30004-DEPUTI JKRP', 'rahayu', 3, '14:58:57', '5102080001-Pemasaran Surat Paket', '2022-03-25', 1223, 'asdf'),
+(16272, 'C043000400-30004-DEPUTI JKRP', 'rahayu', 3, '15:11:57', '5102020104-Beban Imbal Jasa Agen Pos', '2022-03-25', 123431, 'ASFDAF'),
+(16273, 'C043000400-30004-DEPUTI JKRP', 'rahayu', 3, '14:38:12', '5102080001-Pemasaran Surat Paket', '2022-06-22', 1234, 'dgdgh');
 
 -- --------------------------------------------------------
 
@@ -221,19 +225,19 @@ INSERT INTO `tb_user` (`id_user`, `id`, `username`, `password`, `level`, `blokir
 --
 
 --
--- Indexes for table `kko`
+-- Indeks untuk tabel `kko`
 --
 ALTER TABLE `kko`
   ADD PRIMARY KEY (`no`);
 
 --
--- Indexes for table `tb_kode`
+-- Indeks untuk tabel `tb_kode`
 --
 ALTER TABLE `tb_kode`
   ADD PRIMARY KEY (`id_kode`);
 
 --
--- Indexes for table `tb_korek`
+-- Indeks untuk tabel `tb_korek`
 --
 ALTER TABLE `tb_korek`
   ADD PRIMARY KEY (`id`),
@@ -242,25 +246,28 @@ ALTER TABLE `tb_korek`
   ADD KEY `id_3` (`id`);
 
 --
--- Indexes for table `tb_user`
+-- Indeks untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `kko`
+-- AUTO_INCREMENT untuk tabel `kko`
 --
 ALTER TABLE `kko`
-  MODIFY `no` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16271;
+  MODIFY `no` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16274;
+
 --
--- AUTO_INCREMENT for table `tb_user`
+-- AUTO_INCREMENT untuk tabel `tb_user`
 --
 ALTER TABLE `tb_user`
   MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
